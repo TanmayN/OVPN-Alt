@@ -13,3 +13,7 @@ li {
 font-family: 'Nunito', sans-serif;
 color: grey;
 }
+li.finished {
+font-family: 'Nunito', sans-serif;
+color: white;
+}
