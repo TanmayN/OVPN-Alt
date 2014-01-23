@@ -16,7 +16,7 @@ exit();
 		<link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css' />
 		<script type="text/javascript">
 		function delayedRedirect(){
-			window.location = "/done.html"
+			window.location = "/installdone.php"
 		}
 		</script>
 	</head>
