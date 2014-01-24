@@ -8,6 +8,8 @@
 	<body>
 		<center>
 			<h3>Install completed!</h3>
+			<a href="index.html">Return to Index</a>
+			<br><br>
 			<p>Output below:</p>
 			<br>
 			<?php

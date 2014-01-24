@@ -19,7 +19,10 @@ $installed = strpos(shell_exec("/var/www/scripts/installcheck.sh"), 'y');
 	</head>
 	<?php
 	if (isset($_POST['install'])) {
-		if ($installed !== true) {
+		if ($installed !== false) {
+		echo "";
+		}
+		else {
 			echo "<body onLoad=\"setTimeout('delayedRedirect()', 240000)\">";
 		}
 	}
@@ -46,13 +49,13 @@ $installed = strpos(shell_exec("/var/www/scripts/installcheck.sh"), 'y');
 <?php
 if (isset($_POST['install'])) {
 
-	if ($installed !== true) {
-		shell_exec("scripts/startinstall.sh > /dev/null");
-		echo("<center><p>Installation started, allow up to 5 minutes for completion, this page will redirect once it's done.</p></center>");
-	}
-	else {
+	if ($installed !== false) {
 		echo "<center><p>Error, OpenVPN is already installed.</p></center>";
 		echo "<center><a href=\"uninstall.php\">Click here to uninstall it.</a></center>";
+	}
+	else {
+		shell_exec("scripts/startinstall.sh > /dev/null");
+		echo("<center><p>Installation started, allow up to 5 minutes for completion, this page will redirect once it's done.</p></center>");
 	}
 }
 ?>

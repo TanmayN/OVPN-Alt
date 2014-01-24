@@ -17,3 +17,8 @@ li.finished {
 font-family: 'Nunito', sans-serif;
 color: white;
 }
+a {
+font-family: 'Nunito', sans-serif;
+color: white;
+text-decoration: none;
+}
