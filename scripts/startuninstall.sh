@@ -1,0 +1,1 @@
+sudo script -c "sudo /var/www/scripts/openvpn-uninstall.sh"
