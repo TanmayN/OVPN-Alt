@@ -20,7 +20,7 @@
                 echo "";
                 }
                 else {
-                        echo "<body onLoad=\"setTimeout('delayedRedirect()', 240000)\">";
+                        echo "<body onLoad=\"setTimeout('delayedRedirect()', 20000)\">";
                 }
         }
         else {
