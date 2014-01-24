@@ -1,9 +1,6 @@
 <?php
 
-include('../includes/config.inc.php');
-
-$installed = strpos(shell_exec($webdirectory . "admin/scripts/installcheck.sh"), 'e');
-
+	$installed = strpos(shell_exec("admin/scripts/installcheck.sh"), 'e');
 
 ?>
 <html>
@@ -15,7 +12,7 @@ $installed = strpos(shell_exec($webdirectory . "admin/scripts/installcheck.sh"),
 		<link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css' />
 		<script type="text/javascript">
 		function delayedRedirect(){
-			window.location = "/installdone.php"
+			window.location = "/admin/installdone.php"
 		}
 		</script>
 	</head>
@@ -31,10 +28,7 @@ $installed = strpos(shell_exec($webdirectory . "admin/scripts/installcheck.sh"),
 			<h3>Welcome to the installer.</h3>
 			<p>To install, click the button below.</p>
 			<?php
-				if (isset($_POST['install'])) {
-					echo "";
-				}
-				else {
+				if (!isset($_POST['install'])) {
 					echo "<form action=\"install.php\" method=\"post\">";
 					echo "<input type=\"submit\" name=\"install\" value=\"Install\">";
 					echo "</form>";
@@ -51,7 +45,7 @@ if (isset($_POST['install'])) {
 		echo "<center><a href=\"uninstall.php\">Click here to uninstall it.</a></center>";
 	}
 	else {
-		shell_exec("scripts/startinstall.sh " . $webdirectory . "> /dev/null");
+		shell_exec("scripts/startinstall.sh > /dev/null");
 		echo("<center><p>Installation started, allow up to 5 minutes for completion, this page will redirect once it's done.</p></center>");
 	}
 }

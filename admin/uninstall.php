@@ -1,8 +1,6 @@
 <?php
 
-	include('../includes/config.inc.php');
-
-	$installed = strpos(shell_exec($webdirectory . "admin/scripts/installcheck.sh"), 'e');
+	$installed = strpos(shell_exec("admin/scripts/installcheck.sh"), 'e');
 	
 ?>
 <html>
@@ -14,7 +12,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css' />
 		<script type="text/javascript">
 		function delayedRedirect(){
-			window.location = "/uninstalldone.php"
+			window.location = "uninstalldone.php"
 		}
 		</script>
 	</head>
@@ -45,7 +43,7 @@
 					echo "<a href=\"install.php\">Click here to install it.</a></center>";
 				}
 			else {
-					shell_exec("scripts/startuninstall.sh " . $webdirectory . "> /dev/null");
+					shell_exec("scripts/startuninstall.sh > /dev/null");
 					echo("<center><p>Uninstall started, allow up to 30 seconds for completion, this page will redirect once it's done.</p></center>");
 		
 				}
