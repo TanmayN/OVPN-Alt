@@ -1,93 +1,0 @@
-Script started on Thu Jan 23 21:37:35 2014
-Script by Nyr on GitHub with modifications by me
-https://github.com/Nyr/openvpn-install
-OpenVPN road warrior installer for Debian-based distros.
-0% [Working]            Hit http://mirrors.digitalocean.com precise Release.gpg
-            17% [Working]             Hit http://mirrors.digitalocean.com precise-updates Release.gpg
-29% [Working]             Hit http://mirrors.digitalocean.com precise-backports Release.gpg
-38% [Working]             Hit http://mirrors.digitalocean.com precise-security Release.gpg
-44% [Working]             Hit http://mirrors.digitalocean.com precise Release
-44% [Working]             Hit http://mirrors.digitalocean.com precise-updates Release
-             Hit http://mirrors.digitalocean.com precise-backports Release
-44% [Working]             44% [Release gpgv 49.6 kB] [Waiting for headers]                                                20% [Waiting for headers]                         20% [Release gpgv 49.6 kB] [Waiting for headers]                                                15% [Waiting for headers]                         15% [Release gpgv 49.6 kB] [Waiting for headers]                                                12% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise-security Release
-                         12% [Working]             12% [Release gpgv 49.6 kB] [Waiting for headers]                                                11% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise/main Sources
-                         Hit http://mirrors.digitalocean.com precise/restricted Sources
-                         Hit http://mirrors.digitalocean.com precise/universe Sources
-                         Hit http://mirrors.digitalocean.com precise/multiverse Sources
-                         Hit http://mirrors.digitalocean.com precise/main amd64 Packages
-                         Hit http://mirrors.digitalocean.com precise/restricted amd64 Packages
-                         Hit http://mirrors.digitalocean.com precise/universe amd64 Packages
-21% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise/multiverse amd64 Packages
-                         Hit http://mirrors.digitalocean.com precise/main i386 Packages
-                         Hit http://mirrors.digitalocean.com precise/restricted i386 Packages
-25% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise/universe i386 Packages
-                         Hit http://mirrors.digitalocean.com precise/multiverse i386 Packages
-                         Hit http://mirrors.digitalocean.com precise/main TranslationIndex
-                         Hit http://mirrors.digitalocean.com precise/multiverse TranslationIndex
-                         Hit http://mirrors.digitalocean.com precise/restricted TranslationIndex
-30% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise/universe TranslationIndex
-                         Hit http://mirrors.digitalocean.com precise-updates/main Sources
-32% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise-updates/restricted Sources
-                         Hit http://mirrors.digitalocean.com precise-updates/universe Sources
-                         Hit http://mirrors.digitalocean.com precise-updates/multiverse Sources
-                         Hit http://mirrors.digitalocean.com precise-updates/main amd64 Packages
-                         Hit http://mirrors.digitalocean.com precise-updates/restricted amd64 Packages
-39% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise-updates/universe amd64 Packages
-                         Hit http://mirrors.digitalocean.com precise-updates/multiverse amd64 Packages
-                         Hit http://mirrors.digitalocean.com precise-updates/main i386 Packages
-43% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise-updates/restricted i386 Packages
-                         Hit http://mirrors.digitalocean.com precise-updates/universe i386 Packages
-                         Hit http://mirrors.digitalocean.com precise-updates/multiverse i386 Packages
-                         Hit http://mirrors.digitalocean.com precise-updates/main TranslationIndex
-                         Hit http://mirrors.digitalocean.com precise-updates/multiverse TranslationIndex
-48% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise-updates/restricted TranslationIndex
-                         49% [Working]             Hit http://mirrors.digitalocean.com precise-updates/universe TranslationIndex
-             49% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise-backports/main Sources
-                         Hit http://mirrors.digitalocean.com precise-backports/restricted Sources
-                         Hit http://mirrors.digitalocean.com precise-backports/universe Sources
-                         Hit http://mirrors.digitalocean.com precise-backports/multiverse Sources
-                         Hit http://mirrors.digitalocean.com precise-backports/main amd64 Packages
-56% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise-backports/restricted amd64 Packages
-                         57% [Working]             Hit http://mirrors.digitalocean.com precise-backports/universe amd64 Packages
-58% [Working]             Hit http://mirrors.digitalocean.com precise-backports/multiverse amd64 Packages
-59% [Working]             Hit http://mirrors.digitalocean.com precise-backports/main i386 Packages
-60% [Working]             Hit http://mirrors.digitalocean.com precise-backports/restricted i386 Packages
-62% [Working]             Hit http://mirrors.digitalocean.com precise-backports/universe i386 Packages
-63% [Working]             Hit http://mirrors.digitalocean.com precise-backports/multiverse i386 Packages
-64% [Working]             Hit http://mirrors.digitalocean.com precise-backports/main TranslationIndex
-65% [Working]             Hit http://mirrors.digitalocean.com precise-backports/multiverse TranslationIndex
-65% [Working]             Hit http://mirrors.digitalocean.com precise-backports/restricted TranslationIndex
-65% [Working]             Hit http://mirrors.digitalocean.com precise-backports/universe TranslationIndex
-66% [Working]             Hit http://mirrors.digitalocean.com precise-security/main Sources
-67% [Working]             Hit http://mirrors.digitalocean.com precise-security/restricted Sources
-68% [Working]             Hit http://mirrors.digitalocean.com precise-security/universe Sources
-69% [Working]             Hit http://mirrors.digitalocean.com precise-security/multiverse Sources
-71% [Working]             Hit http://mirrors.digitalocean.com precise-security/main amd64 Packages
-72% [Working]             Hit http://mirrors.digitalocean.com precise-security/restricted amd64 Packages
-73% [Working]             Hit http://mirrors.digitalocean.com precise-security/universe amd64 Packages
-74% [Working]             Hit http://mirrors.digitalocean.com precise-security/multiverse amd64 Packages
-75% [Working]             Hit http://mirrors.digitalocean.com precise-security/main i386 Packages
-76% [Working]             Hit http://mirrors.digitalocean.com precise-security/restricted i386 Packages
-78% [Working]             Hit http://mirrors.digitalocean.com precise-security/universe i386 Packages
-79% [Working]             Hit http://mirrors.digitalocean.com precise-security/multiverse i386 Packages
-80% [Working]             Hit http://mirrors.digitalocean.com precise-security/main TranslationIndex
-80% [Working]             Hit http://mirrors.digitalocean.com precise-security/multiverse TranslationIndex
-80% [Working]             Hit http://mirrors.digitalocean.com precise-security/restricted TranslationIndex
-81% [Working]             Hit http://mirrors.digitalocean.com precise-security/universe TranslationIndex
-81% [Working]             Hit http://mirrors.digitalocean.com precise/main Translation-en
-82% [Working]             Hit http://mirrors.digitalocean.com precise/multiverse Translation-en
-83% [Working]             Hit http://mirrors.digitalocean.com precise/restricted Translation-en
-84% [Working]             Hit http://mirrors.digitalocean.com precise/universe Translation-en
-85% [Working]             Hit http://mirrors.digitalocean.com precise-updates/main Translation-en
-87% [Working]             Hit http://mirrors.digitalocean.com precise-updates/multiverse Translation-en
-88% [Working]             Hit http://mirrors.digitalocean.com precise-updates/restricted Translation-en
-89% [Working]             Hit http://mirrors.digitalocean.com precise-updates/universe Translation-en
-90% [Working]             Hit http://mirrors.digitalocean.com precise-backports/main Translation-en
-91% [Working]             Hit http://mirrors.digitalocean.com precise-backports/multiverse Translation-en
-92% [Working]             Hit http://mirrors.digitalocean.com precise-backports/restricted Translation-en
-93% [Working]             Hit http://mirrors.digitalocean.com precise-backports/universe Translation-en
-94% [Working]             Hit http://mirrors.digitalocean.com precise-security/main Translation-en
-96% [Working]             Hit http://mirrors.digitalocean.com precise-security/multiverse Translation-en
-97% [Working]             Hit http://mirrors.digitalocean.com precise-security/restricted Translation-en
-98% [Working]             Hit http://mirrors.digitalocean.com precise-security/universe Translation-en
-99% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 15%Reading package lists... 27%Reading package lists... 29%Reading package lists... 29%Reading package lists... 29%Reading package lists... 29%Reading package lists... 36%Reading package lists... 36%Reading package lists... 36%Reading package lists... 36%Reading package lists... 40%Reading package lists... 57%Reading package lists... 59%Reading package lists... 59%Reading package lists... 59%Reading package lists... 59%Reading package lists... 62%Reading package lists... 62%Reading package lists... 63%Reading package lists... 63%Reading package lists... 63%Reading package lists... 63%Reading package lists... 73%Reading package lists... 76%Reading package lists... 76%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 82%Reading package lists... 82%Reading package lists... 82%Reading package lists... 82%Reading package lists... 82%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 90%Reading package lists... 90%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists..
