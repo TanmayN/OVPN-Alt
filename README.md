@@ -27,6 +27,6 @@ OVPN-Alt is an open source alternative to OpenVPN-AS (Access Server). Currently,
 For support, please join #WhiteForums on irc.rizon.net or click here https://whiteforums.com/irc.php
 For any feature requests or bug reports, please post here. https://whiteforums.com/Thread-OVPN-Alt
 
-Thanks and I hope OVPN-Alt helps!
+Thanks and I hope OVPN-Alt helps you or your business!
 </body>
 </html>
