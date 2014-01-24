@@ -1,11 +1,8 @@
 <?php
 
-if (strpos(shell_exec("ls /etc"),'openvpn') === true) {
+$installed = strpos(shell_exec("/var/www/scripts/installcheck.sh"), 'y');
 
-echo "OpenVPN is already installed.";
-exit();
 
-}
 ?>
 <html>
 	<head>
@@ -22,7 +19,9 @@ exit();
 	</head>
 	<?php
 	if (isset($_POST['install'])) {
-		echo "<body onLoad=\"setTimeout('delayedRedirect()', 240000)\">";
+		if ($installed !== true) {
+			echo "<body onLoad=\"setTimeout('delayedRedirect()', 240000)\">";
+		}
 	}
 	else {
 		echo "<body>";
@@ -31,18 +30,29 @@ exit();
 		<center>
 			<h3>Welcome to the installer.</h3>
 			<p>To install, click the button below.</p>
-			<form action="install.php" method="post">
-				<input type="submit" name="install" value="Install">
-			</form>
-	
+			<?php
+				if (isset($_POST['install'])) {
+					echo "";
+				}
+				else {
+					echo "<form action=\"install.php\" method=\"post\">";
+					echo "<input type=\"submit\" name=\"install\" value=\"Install\">";
+					echo "</form>";
+				}
+			?>
 		</center>
 	</body>
 </html>
 <?php
 if (isset($_POST['install'])) {
 
-shell_exec("scripts/startinstall.sh > /dev/null");
-echo("<center><p>Installation started, allow up to 5 minutes for completion, this page will redirect once it's done.</p></center>");
-
+	if ($installed !== true) {
+		shell_exec("scripts/startinstall.sh > /dev/null");
+		echo("<center><p>Installation started, allow up to 5 minutes for completion, this page will redirect once it's done.</p></center>");
+	}
+	else {
+		echo "<center><p>Error, OpenVPN is already installed.</p></center>";
+		echo "<center><a href=\"uninstall.php\">Click here to uninstall it.</a></center>";
+	}
 }
 ?>
