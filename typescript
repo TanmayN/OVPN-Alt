@@ -1,178 +1,93 @@
-Script started on Thu Jan 23 20:57:05 2014
+Script started on Thu Jan 23 21:37:35 2014
 Script by Nyr on GitHub with modifications by me
 https://github.com/Nyr/openvpn-install
 OpenVPN road warrior installer for Debian-based distros.
 0% [Working]            Hit http://mirrors.digitalocean.com precise Release.gpg
-            17% [Working]             Get:1 http://mirrors.digitalocean.com precise-updates Release.gpg [198 B]
-             0% [1 Release.gpg 0 B/198 B 0%]                               98% [Working]             Get:2 http://mirrors.digitalocean.com precise-backports Release.gpg [198 B]
-             50% [2 Release.gpg 0 B/198 B 0%]                                99% [Working]             Get:3 http://mirrors.digitalocean.com precise-security Release.gpg [198 B]
-             66% [3 Release.gpg 0 B/198 B 0%]                                99% [Working]             Hit http://mirrors.digitalocean.com precise Release
-99% [Working]             99% [Release gpgv 49.6 kB] [Waiting for headers]                                                97% [Waiting for headers]                         Get:4 http://mirrors.digitalocean.com precise-updates Release [49.6 kB]
-                         21% [4 Release 9881 B/49.6 kB 20%]                                  100% [Working]              100% [4 Release gpgv 49.6 kB]                             Get:5 http://mirrors.digitalocean.com precise-backports Release [49.6 kB]
-                             50% [4 Release gpgv 49.6 kB] [5 Release 0 B/49.6 kB 0%]                                                       57% [5 Release 6389 B/49.6 kB 13%]                                  100% [Working]              100% [5 Release gpgv 49.6 kB]                             Get:6 http://mirrors.digitalocean.com precise-security Release [49.6 kB]
-                             67% [5 Release gpgv 49.6 kB] [6 Release 0 B/49.6 kB 0%]                                                       74% [6 Release 10.1 kB/49.6 kB 20%]                                   100% [Working]              100% [6 Release gpgv 49.6 kB]                             Hit http://mirrors.digitalocean.com precise/main Sources
-100% [6 Release gpgv 49.6 kB]                             Hit http://mirrors.digitalocean.com precise/restricted Sources
-100% [6 Release gpgv 49.6 kB]                             Hit http://mirrors.digitalocean.com precise/universe Sources
-100% [6 Release gpgv 49.6 kB]                             Hit http://mirrors.digitalocean.com precise/multiverse Sources
-100% [6 Release gpgv 49.6 kB]                             Hit http://mirrors.digitalocean.com precise/main amd64 Packages
-100% [6 Release gpgv 49.6 kB]                             Hit http://mirrors.digitalocean.com precise/restricted amd64 Packages
-100% [6 Release gpgv 49.6 kB]                             Hit http://mirrors.digitalocean.com precise/universe amd64 Packages
-100% [6 Release gpgv 49.6 kB]                             Hit http://mirrors.digitalocean.com precise/multiverse amd64 Packages
-100% [6 Release gpgv 49.6 kB]                             Hit http://mirrors.digitalocean.com precise/main i386 Packages
-100% [6 Release gpgv 49.6 kB]                             100% [Waiting for headers]                          Hit http://mirrors.digitalocean.com precise/restricted i386 Packages
-                          Hit http://mirrors.digitalocean.com precise/universe i386 Packages
-                          Hit http://mirrors.digitalocean.com precise/multiverse i386 Packages
-                          Hit http://mirrors.digitalocean.com precise/main TranslationIndex
-                          Hit http://mirrors.digitalocean.com precise/multiverse TranslationIndex
-                          Hit http://mirrors.digitalocean.com precise/restricted TranslationIndex
-                          Hit http://mirrors.digitalocean.com precise/universe TranslationIndex
-                          Get:7 http://mirrors.digitalocean.com precise-updates/main Sources [449 kB]
-                          30% [7 Sources 31.6 kB/449 kB 7%]91% [7 Sources 395 kB/449 kB 88%]                                 100% [Working]              Get:8 http://mirrors.digitalocean.com precise-updates/restricted Sources [7039 B]
-              Get:9 http://mirrors.digitalocean.com precise-updates/universe Sources [101 kB]
-              92% [9 Sources 43.4 kB/101 kB 43%]                                  92% [7 Sources bzip2 0 B] [9 Sources 43.4 kB/101 kB 43%]                                                        100% [7 Sources bzip2 0 B]                          Get:10 http://mirrors.digitalocean.com precise-updates/multiverse Sources [8486 B]
-                          99% [7 Sources bzip2 0 B] [10 Sources 0 B/8486 B 0%]                                                    100% [7 Sources bzip2 0 B]                          Get:11 http://mirrors.digitalocean.com precise-updates/main amd64 Packages [745 kB]
-                          49% [7 Sources bzip2 0 B] [11 Packages 0 B/745 kB 0%]                                                     100% [7 Sources bzip2 0 B]                          Get:12 http://mirrors.digitalocean.com precise-updates/restricted amd64 Packages [11.4 kB]
-                          99% [7 Sources bzip2 0 B] [12 Packages 0 B/11.4 kB 0%]                                                      100% [7 Sources bzip2 0 B]                          Get:13 http://mirrors.digitalocean.com precise-updates/universe amd64 Packages [231 kB]
-                          86% [7 Sources bzip2 0 B] [13 Packages 0 B/231 kB 0%]                                                     100% [7 Sources bzip2 0 B]                          Get:14 http://mirrors.digitalocean.com precise-updates/multiverse amd64 Packages [14.2 kB]
-                          99% [7 Sources bzip2 0 B] [14 Packages 0 B/14.2 kB 0%]                                                      100% [7 Sources bzip2 0 B]                          Get:15 http://mirrors.digitalocean.com precise-updates/main i386 Packages [769 kB]
-                          69% [7 Sources bzip2 0 B] [15 Packages 0 B/769 kB 0%]                                                     81% [15 Packages 302 kB/769 kB 39%]                                   81% [8 Sources bzip2 0 B] [15 Packages 302 kB/769 kB 39%]                                                         81% [15 Packages 302 kB/769 kB 39%]                                   81% [9 Sources bzip2 0 B] [15 Packages 302 kB/769 kB 39%]                                                         94% [15 Packages 627 kB/769 kB 82%]                                   94% [10 Sources bzip2 0 B] [15 Packages 627 kB/769 kB 82%]                                                          95% [15 Packages 636 kB/769 kB 83%]                                   95% [11 Packages bzip2 0 B] [15 Packages 636 kB/769 kB 83%]                                                           100% [11 Packages bzip2 0 B]                            Get:16 http://mirrors.digitalocean.com precise-updates/restricted i386 Packages [11.5 kB]
-                            100% [11 Packages bzip2 0 B] [16 Packages 0 B/11.5 kB 0%]                                                         100% [11 Packages bzip2 0 B]                            Get:17 http://mirrors.digitalocean.com precise-updates/universe i386 Packages [236 kB]
-                            91% [11 Packages bzip2 0 B] [17 Packages 0 B/236 kB 0%]                                                       100% [11 Packages bzip2 0 B]                            Get:18 http://mirrors.digitalocean.com precise-updates/multiverse i386 Packages [14.4 kB]
-                            99% [11 Packages bzip2 0 B] [18 Packages 0 B/14.4 kB 0%]                                                        100% [11 Packages bzip2 0 B]                            Hit http://mirrors.digitalocean.com precise-updates/main TranslationIndex
-                            Hit http://mirrors.digitalocean.com precise-updates/multiverse TranslationIndex
-                            Hit http://mirrors.digitalocean.com precise-updates/restricted TranslationIndex
-                            Hit http://mirrors.digitalocean.com precise-updates/universe TranslationIndex
-                            Get:19 http://mirrors.digitalocean.com precise-backports/main Sources [4226 B]
-                            Get:20 http://mirrors.digitalocean.com precise-backports/restricted Sources [14 B]
-                            Get:21 http://mirrors.digitalocean.com precise-backports/universe Sources [36.4 kB]
-                            100% [11 Packages bzip2 0 B] [21 Sources 36.4 kB/36.4 kB 100%]                                                              Get:22 http://mirrors.digitalocean.com precise-backports/multiverse Sources [5311 B]
-                                                              100% [11 Packages bzip2 0 B] [Waiting for headers]                                                  Get:23 http://mirrors.digitalocean.com precise-backports/main amd64 Packages [4806 B]
-                                                  100% [11 Packages bzip2 0 B] [23 Packages 4090 B/4806 B 85%]                                                            Get:24 http://mirrors.digitalocean.com precise-backports/restricted amd64 Packages [14 B]
-                                                            100% [11 Packages bzip2 0 B] [24 Packages 14 B/14 B 100%]                                                         100% [11 Packages bzip2 0 B]                            Get:25 http://mirrors.digitalocean.com precise-backports/universe amd64 Packages [37.9 kB]
-                            99% [11 Packages bzip2 0 B] [25 Packages 0 B/37.9 kB 0%]                                                        Get:26 http://mirrors.digitalocean.com precise-backports/multiverse amd64 Packages [5206 B]
-                                                        Get:27 http://mirrors.digitalocean.com precise-backports/main i386 Packages [4811 B]
-                                                        Get:28 http://mirrors.digitalocean.com precise-backports/restricted i386 Packages [14 B]
-                                                        Get:29 http://mirrors.digitalocean.com precise-backports/universe i386 Packages [37.7 kB]
-                                                        100% [11 Packages bzip2 0 B] [29 Packages 27.2 kB/37.7 kB 72%]                                                              100% [11 Packages bzip2 0 B]                            Get:30 http://mirrors.digitalocean.com precise-backports/multiverse i386 Packages [5178 B]
-                            100% [11 Packages bzip2 0 B] [30 Packages 0 B/5178 B 0%]                                                        100% [11 Packages bzip2 0 B]                            Hit http://mirrors.digitalocean.com precise-backports/main TranslationIndex
-100% [11 Packages bzip2 0 B]                            Hit http://mirrors.digitalocean.com precise-backports/multiverse TranslationIndex
-100% [11 Packages bzip2 0 B]                            Hit http://mirrors.digitalocean.com precise-backports/restricted TranslationIndex
-                            Hit http://mirrors.digitalocean.com precise-backports/universe TranslationIndex
-                            100% [11 Packages bzip2 0 B] [Waiting for headers]                                                  100% [Waiting for headers]                          100% [12 Packages bzip2 0 B] [Waiting for headers]                                                  100% [Waiting for headers]                          Get:31 http://mirrors.digitalocean.com precise-security/main Sources [96.7 kB]
-                          99% [31 Sources 64.9 kB/96.7 kB 67%]                                    99% [13 Packages bzip2 0 B] [31 Sources 64.9 kB/96.7 kB 67%]                                                            100% [13 Packages bzip2 0 B]                            Get:32 http://mirrors.digitalocean.com precise-security/restricted Sources [2494 B]
-                            100% [13 Packages bzip2 0 B] [32 Sources 0 B/2494 B 0%]                                                       100% [13 Packages bzip2 0 B]                            Get:33 http://mirrors.digitalocean.com precise-security/universe Sources [30.5 kB]
-                            99% [13 Packages bzip2 0 B] [33 Sources 0 B/30.5 kB 0%]                                                       100% [13 Packages bzip2 0 B]                            Get:34 http://mirrors.digitalocean.com precise-security/multiverse Sources [1797 B]
-                            100% [13 Packages bzip2 0 B] [34 Sources 0 B/1797 B 0%]                                                       100% [34 Sources 1041 B/1797 B 58%]                                   100% [14 Packages bzip2 0 B] [34 Sources 1041 B/1797 B 58%]                                                           100% [34 Sources 1041 B/1797 B 58%]                                   100% [15 Packages bzip2 0 B] [34 Sources 1041 B/1797 B 58%]                                                           100% [15 Packages bzip2 0 B]                            Get:35 http://mirrors.digitalocean.com precise-security/main amd64 Packages [357 kB]
-                            91% [15 Packages bzip2 0 B] [35 Packages 47.2 kB/357 kB 13%]                                                            100% [15 Packages bzip2 0 B]                            Get:36 http://mirrors.digitalocean.com precise-security/restricted amd64 Packages [4627 B]
-                            100% [15 Packages bzip2 0 B] [36 Packages 0 B/4627 B 0%]                                                        100% [15 Packages bzip2 0 B]                            Get:37 http://mirrors.digitalocean.com precise-security/universe amd64 Packages [90.2 kB]
-                            97% [15 Packages bzip2 0 B] [37 Packages 0 B/90.2 kB 0%]                                                        100% [15 Packages bzip2 0 B]                            Get:38 http://mirrors.digitalocean.com precise-security/multiverse amd64 Packages [2454 B]
-                            100% [15 Packages bzip2 0 B] [38 Packages 0 B/2454 B 0%]                                                        100% [15 Packages bzip2 0 B]                            Get:39 http://mirrors.digitalocean.com precise-security/main i386 Packages [377 kB]
-                            90% [15 Packages bzip2 0 B] [39 Packages 0 B/377 kB 0%]                                                       100% [15 Packages bzip2 0 B]                            Get:40 http://mirrors.digitalocean.com precise-security/restricted i386 Packages [4620 B]
-                            100% [15 Packages bzip2 0 B] [40 Packages 0 B/4620 B 0%]                                                        100% [15 Packages bzip2 0 B]                            Get:41 http://mirrors.digitalocean.com precise-security/universe i386 Packages [94.5 kB]
-                            98% [15 Packages bzip2 0 B] [41 Packages 0 B/94.5 kB 0%]                                                        100% [15 Packages bzip2 0 B]                            Get:42 http://mirrors.digitalocean.com precise-security/multiverse i386 Packages [2650 B]
-                            100% [15 Packages bzip2 0 B] [42 Packages 0 B/2650 B 0%]                                                        100% [15 Packages bzip2 0 B]                            Get:43 http://mirrors.digitalocean.com precise-security/main TranslationIndex [74 B]
-                            100% [15 Packages bzip2 0 B] [43 TranslationIndex 0 B/74 B 0%]                                                              100% [15 Packages bzip2 0 B]                            Get:44 http://mirrors.digitalocean.com precise-security/multiverse TranslationIndex [72 B]
-                            100% [15 Packages bzip2 0 B] [44 TranslationIndex 0 B/72 B 0%]                                                              100% [15 Packages bzip2 0 B]                            Get:45 http://mirrors.digitalocean.com precise-security/restricted TranslationIndex [72 B]
-                            100% [15 Packages bzip2 0 B] [45 TranslationIndex 0 B/72 B 0%]                                                              100% [15 Packages bzip2 0 B]                            Get:46 http://mirrors.digitalocean.com precise-security/universe TranslationIndex [73 B]
-                            100% [15 Packages bzip2 0 B] [46 TranslationIndex 0 B/73 B 0%]                                                              100% [15 Packages bzip2 0 B]                            Hit http://mirrors.digitalocean.com precise/main Translation-en
-100% [15 Packages bzip2 0 B]                            Hit http://mirrors.digitalocean.com precise/multiverse Translation-en
-100% [15 Packages bzip2 0 B]                            Hit http://mirrors.digitalocean.com precise/restricted Translation-en
-                            100% [15 Packages bzip2 0 B] [Waiting for headers]                                                  Hit http://mirrors.digitalocean.com precise/universe Translation-en
-                                                  Hit http://mirrors.digitalocean.com precise-updates/main Translation-en
-                                                  Hit http://mirrors.digitalocean.com precise-updates/multiverse Translation-en
-                                                  Hit http://mirrors.digitalocean.com precise-updates/restricted Translation-en
-                                                  Hit http://mirrors.digitalocean.com precise-updates/universe Translation-en
-100% [15 Packages bzip2 0 B] [Waiting for headers]                                                  Hit http://mirrors.digitalocean.com precise-backports/main Translation-en
-                                                  Hit http://mirrors.digitalocean.com precise-backports/multiverse Translation-en
-                                                  Hit http://mirrors.digitalocean.com precise-backports/restricted Translation-en
-                                                  Hit http://mirrors.digitalocean.com precise-backports/universe Translation-en
-100% [15 Packages bzip2 0 B] [Waiting for headers]                                                  Hit http://mirrors.digitalocean.com precise-security/main Translation-en
-                                                  100% [15 Packages bzip2 0 B]                            Hit http://mirrors.digitalocean.com precise-security/multiverse Translation-en
-100% [15 Packages bzip2 0 B]                            Hit http://mirrors.digitalocean.com precise-security/restricted Translation-en
-100% [15 Packages bzip2 0 B]                            Get:47 http://mirrors.digitalocean.com precise-security/universe Translation-en [56.1 kB]
-                            99% [15 Packages bzip2 0 B] [47 Translation-en 0 B/56.1 kB 0%]                                                              100% [15 Packages bzip2 0 B]                            100% [Working]              100% [16 Packages bzip2 0 B]                            100% [Working]              100% [17 Packages bzip2 0 B]                            100% [Working]              100% [18 Packages bzip2 0 B]                            100% [Working]              100% [19 Sources bzip2 0 B]                           100% [Working]              100% [20 Sources bzip2 0 B]                           100% [Working]              100% [21 Sources bzip2 0 B]                           100% [Working]              100% [22 Sources bzip2 0 B]                           100% [Working]              100% [23 Packages bzip2 0 B]                            100% [Working]              100% [24 Packages bzip2 0 B]                            100% [Working]              100% [25 Packages bzip2 0 B]                            100% [Working]              100% [26 Packages bzip2 0 B]                            100% [Working]              100% [27 Packages bzip2 0 B]                            100% [Working]              100% [28 Packages bzip2 0 B]                            100% [Working]              100% [29 Packages bzip2 0 B]                            100% [Working]              100% [30 Packages bzip2 0 B]                            100% [Working]              100% [31 Sources bzip2 0 B]                           100% [Working]              100% [32 Sources bzip2 0 B]                           100% [Working]              100% [33 Sources bzip2 0 B]                           100% [Working]              100% [34 Sources bzip2 0 B]                           100% [Working]              100% [35 Packages bzip2 0 B]                            100% [Working]              100% [36 Packages bzip2 0 B]                            100% [Working]              100% [37 Packages bzip2 0 B]                            100% [Working]                                                      662 kB/s 0s100% [38 Packages bzip2 0 B]                                        662 kB/s 0s100% [Working]                                                      662 kB/s 0s100% [39 Packages bzip2 0 B]                                        662 kB/s 0s100% [Working]                                                      662 kB/s 0s100% [40 Packages bzip2 0 B]                                        662 kB/s 0s100% [Working]                                                      662 kB/s 0s100% [41 Packages bzip2 0 B]                                        662 kB/s 0s100% [Working]                                                      662 kB/s 0s100% [42 Packages bzip2 0 B]                                        662 kB/s 0s100% [Working]                                                      662 kB/s 0s100% [47 Translation-en bzip2 0 B]                                  662 kB/s 0s100% [Working]                                                      662 kB/s 0s                                                                               Fetched 4008 kB in 6s (587 kB/s)
-Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 12%Reading package lists... 22%Reading package lists... 29%Reading package lists... 29%Reading package lists... 29%Reading package lists... 29%Reading package lists... 33%Reading package lists... 36%Reading package lists... 36%Reading package lists... 36%Reading package lists... 36%Reading package lists... 44%Reading package lists... 59%Reading package lists... 59%Reading package lists... 59%Reading package lists... 59%Reading package lists... 61%Reading package lists... 62%Reading package lists... 62%Reading package lists... 63%Reading package lists... 63%Reading package lists... 63%Reading package lists... 63%Reading package lists... 76%Reading package lists... 76%Reading package lists... 78%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 82%Reading package lists... 82%Reading package lists... 82%Reading package lists... 82%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 89%Reading package lists... 90%Reading package lists... 90%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
-Reading state information... 0%Reading state information... 1%Reading state information... Done
-iptables is already the newest version.
-openssl is already the newest version.
-The following NEW packages will be installed:
-  openvpn
-0 upgraded, 1 newly installed, 0 to remove and 4 not upgraded.
-Need to get 0 B/441 kB of archives.
-After this operation, 1058 kB of additional disk space will be used.
-debconf: unable to initialize frontend: Dialog
-debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
-debconf: falling back to frontend: Readline
-Preconfiguring packages ...
-Selecting previously unselected package openvpn.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 54561 files and directories currently installed.)
-Unpacking openvpn (from .../openvpn_2.2.1-8ubuntu1.1_amd64.deb) ...
-Processing triggers for man-db ...
-debconf: unable to initialize frontend: Dialog
-debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
-debconf: falling back to frontend: Readline
-Processing triggers for ureadahead ...
-Setting up openvpn (2.2.1-8ubuntu1.1) ...
-debconf: unable to initialize frontend: Dialog
-debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
-debconf: falling back to frontend: Readline
- * Restarting virtual private network daemon(s)...
- *   No VPN is running.
-Processing triggers for libc-bin ...
-ldconfig deferred processing now taking place
-NOTE: If you run ./clean-all, I will be doing a rm -rf on /etc/openvpn/easy-rsa/2.0/keys
-Using CA Common Name: changeme
-Generating a 2048 bit RSA private key
-.............+++
-..........+++
-writing new private key to 'ca.key'
------
-Using Common Name: changeme
-Generating a 2048 bit RSA private key
-...............+++
-........................................................................................................+++
-writing new private key to 'server.key'
------
-Using configuration from /etc/openvpn/easy-rsa/2.0/openssl.cnf
-Check that the request matches the signature
-Signature ok
-The Subject's Distinguished Name is as follows
-countryName           :PRINTABLE:'US'
-stateOrProvinceName   :PRINTABLE:'CA'
-localityName          :PRINTABLE:'SanFrancisco'
-organizationName      :PRINTABLE:'Fort-Funston'
-organizationalUnitName:PRINTABLE:'changeme'
-commonName            :PRINTABLE:'changeme'
-name                  :PRINTABLE:'changeme'
-emailAddress          :IA5STRING:'mail@host.domain'
-Certificate is to be certified until Jan 22 01:57:24 2024 GMT (3650 days)
-
-Write out database with 1 new entries
-Data Base Updated
-Using Common Name: User
-Generating a 2048 bit RSA private key
-.....+++
-.+++
-writing new private key to 'User.key'
------
-Using configuration from /etc/openvpn/easy-rsa/2.0/openssl.cnf
-Check that the request matches the signature
-Signature ok
-The Subject's Distinguished Name is as follows
-countryName           :PRINTABLE:'US'
-stateOrProvinceName   :PRINTABLE:'CA'
-localityName          :PRINTABLE:'SanFrancisco'
-organizationName      :PRINTABLE:'Fort-Funston'
-organizationalUnitName:PRINTABLE:'changeme'
-commonName            :PRINTABLE:'User'
-name                  :PRINTABLE:'changeme'
-emailAddress          :IA5STRING:'mail@host.domain'
-Certificate is to be certified until Jan 22 01:57:24 2024 GMT (3650 days)
-
-Write out database with 1 new entries
-Data Base Updated
-Generating DH parameters, 2048 bit long safe prime, generator 2
-This is going to take a long time
-..........................................................................................................+...............................................................................................................................................................................................................................+..........................................................................................................................+.+....................................................................................................................................................................................+...........................................................................................................................................................................................................................................................................................+....................................................................................+.......+......+......+...........................................................................................................+.......+..................................................+............................+..........................................+................................................................................................................................................................................+..................................................................................+..............................+............................................................................................................................................................+.......................................................................+........+.....................................................................................................................................................................................+............................................+..................................................+..........................................................................................................................................+.................................................................+......................................................................................................................................................+.............................................+...........................+....................................................................................................................................................................................................................................................................................
+            17% [Working]             Hit http://mirrors.digitalocean.com precise-updates Release.gpg
+29% [Working]             Hit http://mirrors.digitalocean.com precise-backports Release.gpg
+38% [Working]             Hit http://mirrors.digitalocean.com precise-security Release.gpg
+44% [Working]             Hit http://mirrors.digitalocean.com precise Release
+44% [Working]             Hit http://mirrors.digitalocean.com precise-updates Release
+             Hit http://mirrors.digitalocean.com precise-backports Release
+44% [Working]             44% [Release gpgv 49.6 kB] [Waiting for headers]                                                20% [Waiting for headers]                         20% [Release gpgv 49.6 kB] [Waiting for headers]                                                15% [Waiting for headers]                         15% [Release gpgv 49.6 kB] [Waiting for headers]                                                12% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise-security Release
+                         12% [Working]             12% [Release gpgv 49.6 kB] [Waiting for headers]                                                11% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise/main Sources
+                         Hit http://mirrors.digitalocean.com precise/restricted Sources
+                         Hit http://mirrors.digitalocean.com precise/universe Sources
+                         Hit http://mirrors.digitalocean.com precise/multiverse Sources
+                         Hit http://mirrors.digitalocean.com precise/main amd64 Packages
+                         Hit http://mirrors.digitalocean.com precise/restricted amd64 Packages
+                         Hit http://mirrors.digitalocean.com precise/universe amd64 Packages
+21% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise/multiverse amd64 Packages
+                         Hit http://mirrors.digitalocean.com precise/main i386 Packages
+                         Hit http://mirrors.digitalocean.com precise/restricted i386 Packages
+25% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise/universe i386 Packages
+                         Hit http://mirrors.digitalocean.com precise/multiverse i386 Packages
+                         Hit http://mirrors.digitalocean.com precise/main TranslationIndex
+                         Hit http://mirrors.digitalocean.com precise/multiverse TranslationIndex
+                         Hit http://mirrors.digitalocean.com precise/restricted TranslationIndex
+30% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise/universe TranslationIndex
+                         Hit http://mirrors.digitalocean.com precise-updates/main Sources
+32% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise-updates/restricted Sources
+                         Hit http://mirrors.digitalocean.com precise-updates/universe Sources
+                         Hit http://mirrors.digitalocean.com precise-updates/multiverse Sources
+                         Hit http://mirrors.digitalocean.com precise-updates/main amd64 Packages
+                         Hit http://mirrors.digitalocean.com precise-updates/restricted amd64 Packages
+39% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise-updates/universe amd64 Packages
+                         Hit http://mirrors.digitalocean.com precise-updates/multiverse amd64 Packages
+                         Hit http://mirrors.digitalocean.com precise-updates/main i386 Packages
+43% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise-updates/restricted i386 Packages
+                         Hit http://mirrors.digitalocean.com precise-updates/universe i386 Packages
+                         Hit http://mirrors.digitalocean.com precise-updates/multiverse i386 Packages
+                         Hit http://mirrors.digitalocean.com precise-updates/main TranslationIndex
+                         Hit http://mirrors.digitalocean.com precise-updates/multiverse TranslationIndex
+48% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise-updates/restricted TranslationIndex
+                         49% [Working]             Hit http://mirrors.digitalocean.com precise-updates/universe TranslationIndex
+             49% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise-backports/main Sources
+                         Hit http://mirrors.digitalocean.com precise-backports/restricted Sources
+                         Hit http://mirrors.digitalocean.com precise-backports/universe Sources
+                         Hit http://mirrors.digitalocean.com precise-backports/multiverse Sources
+                         Hit http://mirrors.digitalocean.com precise-backports/main amd64 Packages
+56% [Waiting for headers]                         Hit http://mirrors.digitalocean.com precise-backports/restricted amd64 Packages
+                         57% [Working]             Hit http://mirrors.digitalocean.com precise-backports/universe amd64 Packages
+58% [Working]             Hit http://mirrors.digitalocean.com precise-backports/multiverse amd64 Packages
+59% [Working]             Hit http://mirrors.digitalocean.com precise-backports/main i386 Packages
+60% [Working]             Hit http://mirrors.digitalocean.com precise-backports/restricted i386 Packages
+62% [Working]             Hit http://mirrors.digitalocean.com precise-backports/universe i386 Packages
+63% [Working]             Hit http://mirrors.digitalocean.com precise-backports/multiverse i386 Packages
+64% [Working]             Hit http://mirrors.digitalocean.com precise-backports/main TranslationIndex
+65% [Working]             Hit http://mirrors.digitalocean.com precise-backports/multiverse TranslationIndex
+65% [Working]             Hit http://mirrors.digitalocean.com precise-backports/restricted TranslationIndex
+65% [Working]             Hit http://mirrors.digitalocean.com precise-backports/universe TranslationIndex
+66% [Working]             Hit http://mirrors.digitalocean.com precise-security/main Sources
+67% [Working]             Hit http://mirrors.digitalocean.com precise-security/restricted Sources
+68% [Working]             Hit http://mirrors.digitalocean.com precise-security/universe Sources
+69% [Working]             Hit http://mirrors.digitalocean.com precise-security/multiverse Sources
+71% [Working]             Hit http://mirrors.digitalocean.com precise-security/main amd64 Packages
+72% [Working]             Hit http://mirrors.digitalocean.com precise-security/restricted amd64 Packages
+73% [Working]             Hit http://mirrors.digitalocean.com precise-security/universe amd64 Packages
+74% [Working]             Hit http://mirrors.digitalocean.com precise-security/multiverse amd64 Packages
+75% [Working]             Hit http://mirrors.digitalocean.com precise-security/main i386 Packages
+76% [Working]             Hit http://mirrors.digitalocean.com precise-security/restricted i386 Packages
+78% [Working]             Hit http://mirrors.digitalocean.com precise-security/universe i386 Packages
+79% [Working]             Hit http://mirrors.digitalocean.com precise-security/multiverse i386 Packages
+80% [Working]             Hit http://mirrors.digitalocean.com precise-security/main TranslationIndex
+80% [Working]             Hit http://mirrors.digitalocean.com precise-security/multiverse TranslationIndex
+80% [Working]             Hit http://mirrors.digitalocean.com precise-security/restricted TranslationIndex
+81% [Working]             Hit http://mirrors.digitalocean.com precise-security/universe TranslationIndex
+81% [Working]             Hit http://mirrors.digitalocean.com precise/main Translation-en
+82% [Working]             Hit http://mirrors.digitalocean.com precise/multiverse Translation-en
+83% [Working]             Hit http://mirrors.digitalocean.com precise/restricted Translation-en
+84% [Working]             Hit http://mirrors.digitalocean.com precise/universe Translation-en
+85% [Working]             Hit http://mirrors.digitalocean.com precise-updates/main Translation-en
+87% [Working]             Hit http://mirrors.digitalocean.com precise-updates/multiverse Translation-en
+88% [Working]             Hit http://mirrors.digitalocean.com precise-updates/restricted Translation-en
+89% [Working]             Hit http://mirrors.digitalocean.com precise-updates/universe Translation-en
+90% [Working]             Hit http://mirrors.digitalocean.com precise-backports/main Translation-en
+91% [Working]             Hit http://mirrors.digitalocean.com precise-backports/multiverse Translation-en
+92% [Working]             Hit http://mirrors.digitalocean.com precise-backports/restricted Translation-en
+93% [Working]             Hit http://mirrors.digitalocean.com precise-backports/universe Translation-en
+94% [Working]             Hit http://mirrors.digitalocean.com precise-security/main Translation-en
+96% [Working]             Hit http://mirrors.digitalocean.com precise-security/multiverse Translation-en
+97% [Working]             Hit http://mirrors.digitalocean.com precise-security/restricted Translation-en
+98% [Working]             Hit http://mirrors.digitalocean.com precise-security/universe Translation-en
+99% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 15%Reading package lists... 27%Reading package lists... 29%Reading package lists... 29%Reading package lists... 29%Reading package lists... 29%Reading package lists... 36%Reading package lists... 36%Reading package lists... 36%Reading package lists... 36%Reading package lists... 40%Reading package lists... 57%Reading package lists... 59%Reading package lists... 59%Reading package lists... 59%Reading package lists... 59%Reading package lists... 62%Reading package lists... 62%Reading package lists... 63%Reading package lists... 63%Reading package lists... 63%Reading package lists... 63%Reading package lists... 73%Reading package lists... 76%Reading package lists... 76%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 82%Reading package lists... 82%Reading package lists... 82%Reading package lists... 82%Reading package lists... 82%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 90%Reading package lists... 90%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists..

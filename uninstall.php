@@ -1,9 +1,9 @@
 <?php
-	$installed = strpos(shell_exec("/var/www/scripts/installcheck.sh"), 'y');
+	$installed = strpos(shell_exec("/var/www/scripts/installcheck.sh"), "e");
 ?>
 <html>
 	<head>
-		<title>OpenVPN Unnstaller</title>
+		<title>OpenVPN Uninstaller</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<link href='http://fonts.googleapis.com/css?family=Exo+2:400,300,300italic,700italic,700' rel='stylesheet' type='text/css' />
 		<link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css' />
@@ -15,17 +15,12 @@
 		</script>
 	</head>
 	<?php
-        if (isset($_POST['uninstall'])) {
-                if ($installed !== false) {
-                echo "";
-                }
-                else {
-                        echo "<body onLoad=\"setTimeout('delayedRedirect()', 20000)\">";
-                }
+        if ($installed == true && isset($_POST['uninstall'])) {
+            echo("<body onLoad=\"setTimeout('delayedRedirect()', 20000)\">");
         }
-        else {
-                echo "<body>";
-        }
+		else {
+			echo("<body>");
+		}
 	?>
 	<center>
 			<h3>Welcome to the uninstaller.</h3>
@@ -41,7 +36,7 @@
 			?>
 			<?php
 			if (isset($_POST['uninstall'])) {
-				if ($installed !== true) {
+				if ($installed == false) {
 					echo("<center><p>Error, OpenVPN is not installed.</p>");
 					echo "<a href=\"install.php\">Click here to install it.</a></center>";
 				}

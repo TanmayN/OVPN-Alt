@@ -1,6 +1,6 @@
 <?php
 
-$installed = strpos(shell_exec("/var/www/scripts/installcheck.sh"), 'y');
+$installed = strpos(shell_exec("/var/www/scripts/installcheck.sh"), 'e');
 
 
 ?>
@@ -18,17 +18,12 @@ $installed = strpos(shell_exec("/var/www/scripts/installcheck.sh"), 'y');
 		</script>
 	</head>
 	<?php
-	if (isset($_POST['install'])) {
-		if ($installed !== false) {
-		echo "";
+		if ($installed == false	&& isset($_POST['install'])) {	
+			echo("<body onLoad=\"setTimeout('delayedRedirect()', 240000)\">");
 		}
 		else {
-			echo "<body onLoad=\"setTimeout('delayedRedirect()', 240000)\">";
+			echo("<body>");
 		}
-	}
-	else {
-		echo "<body>";
-	}
 	?>
 		<center>
 			<h3>Welcome to the installer.</h3>
