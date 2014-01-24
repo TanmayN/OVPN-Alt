@@ -13,9 +13,10 @@
 			<p>Output below:</p>
 			<br>
 			<?php
-				shell_exec("sed -e 's/$/<br>/' -i typescript");
+				shell_exec("sudo sed -e 's/$/<br>/' -i typescript");
 				$output = shell_exec("cat typescript");
 				echo($output);
+				sleep(1);
 				shell_exec("sudo rm typescript");
 			?>
 		</center>
