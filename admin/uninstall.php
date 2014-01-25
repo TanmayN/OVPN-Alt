@@ -1,6 +1,6 @@
 <?php
 
-	$installed = strpos(shell_exec("admin/scripts/installcheck.sh"), 'e');
+	$installed = strpos(shell_exec("scripts/installcheck.sh"), 'e');
 	
 ?>
 <html>

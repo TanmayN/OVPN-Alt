@@ -33,7 +33,7 @@ else
 	ALTPORT="n"
 	CLIENT="User"
 	apt-get update
-    apt-get install openvpn iptables openssl -y
+    apt-get install openvpn iptables sshpass openssl -y
     cp -R /usr/share/doc/openvpn/examples/easy-rsa/ /etc/openvpn
     # easy-rsa isn't available by default for Debian Jessie and newer
     if [ ! -d /etc/openvpn/easy-rsa/2.0/ ]; then
