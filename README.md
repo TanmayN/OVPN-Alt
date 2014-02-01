@@ -7,10 +7,10 @@ OVPN-Alt is an open source alternative to OpenVPN-AS (Access Server). Currently,
 	
 	Install OpenVPN ✓
 	Uninstall OpenVPN ✓
-	Add users
-	Remove users
+	Add users ▒^▒^▒
+	Remove users ▒^▒^▒
 	Timed removal of users
-	Multiple VPN servers (one host, multiple slaves)
+	Multiple VPN servers (one host, multiple slaves) || Sorta done
 	Change OpenVPN configuration
                                 
 
