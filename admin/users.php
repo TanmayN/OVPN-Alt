@@ -4,7 +4,7 @@
 	
 	if (!$installed) {
 		echo("OpenVPN isn't installed.<br>");
-		echo("<a href=\"install.php\">Click to go to the installer.</a>");
+		die("<a href=\"install.php\">Click to go to the installer.</a>");
 	}
 	
 	
@@ -28,18 +28,25 @@
 			if (!$_POST['username'] && !$_POST['deletuser']) {
 				echo("<form action=\"users.php\" method=\"post\">");
 				echo("<p>Username: <input type=\"form\" name=\"username\"><br>");
+				echo("<p>Password: <input type=\"form\" name=\"password\"><br>");
 				echo("<input type=\"submit\" value=\"Add User\">");
 				echo("</form>");
 			} 
 			elseif ($_POST['deleteuser']) {
 				echo("<form action=\"users.php\" method=\"post\">");
 				echo("<p>Username: <input type=\"form\" name=\"username\"><br>");
+				echo("<p>Password: <input type=\"form\" name=\"password\"><br>");
 				echo("<input type=\"submit\" value=\"Add User\">");
 				echo("</form>");
 			}
 			else {
-				$output = shell_exec("sudo scripts/adduser.sh " . $_POST['username']);
+				$output = shell_exec("sudo scripts/adduser.sh " . $_POST['username'] . " " . $_POST['password']);
 				sleep(3);
+				echo("<form action=\"users.php\" method=\"post\">");
+				echo("<p>Username: <input type=\"form\" name=\"username\"><br>");
+				echo("<p>Password: <input type=\"form\" name=\"password\"><br>");
+				echo("<input type=\"submit\" value=\"Add User\">");
+				echo("</form>");
 				echo("<p>User added!</p>");
 			}
 		?>
@@ -70,6 +77,10 @@
 				elseif ($_POST['deleteuser'] && $_POST['username']) {
 					$output = shell_exec("scripts/removeuser.sh " . $_POST['username']);
 					sleep(3);
+					echo("<p>Username: <input type=\"form\" name=\"username\"><br>");
+					echo("<input type=\"submit\" value=\"Remove User\">");
+					echo("<input type=\"hidden\" name=\"deleteuser\" value=\"foo\">");
+					echo("</form>");
 					echo("<p>User removed!</p>");
 				}
 			?>

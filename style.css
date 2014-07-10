@@ -1,0 +1,28 @@
+body {
+background-color: #0066CC;
+}
+h3 {
+font-family: 'Exo 2', sans-serif;
+color: white;
+}
+p {
+font-family: 'Nunito', sans-serif;
+color: white;
+}
+li {
+font-family: 'Nunito', sans-serif;
+color: grey;
+}
+li.finished {
+font-family: 'Nunito', sans-serif;
+color: white;
+}
+a {
+font-family: 'Nunito', sans-serif;
+color: white;
+text-decoration: none;
+}
+form {
+font-family: 'Nunito', sans-serif;
+color: white;
+}

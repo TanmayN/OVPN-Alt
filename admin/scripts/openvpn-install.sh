@@ -4,7 +4,6 @@ echo "Script by Nyr on GitHub with modifications by me"
 echo "https://github.com/Nyr/openvpn-install"
 echo "OpenVPN road warrior installer for Debian-based distros."
 
-
 if [ $USER != 'root' ]; then
         echo "Sorry, you need to run this as root"
         exit
@@ -31,7 +30,7 @@ if [ -e /etc/openvpn/server.conf ]; then
 else
 	PORT="1194"
 	ALTPORT="n"
-	CLIENT="User"
+	CLIENT=`hostname`
 	apt-get update
     apt-get install openvpn iptables sshpass openssl -y
     cp -R /usr/share/doc/openvpn/examples/easy-rsa/ /etc/openvpn
@@ -79,6 +78,7 @@ else
     sed -i 's|;push "dhcp-option DNS 208.67.222.222"|push "dhcp-option DNS 129.250.35.250"|' server.conf
     sed -i 's|;push "dhcp-option DNS 208.67.220.220"|push "dhcp-option DNS 74.82.42.42"|' server.conf
     sed -i "s|port 1194|port $PORT|" server.conf
+	echo "plugin /usr/lib/openvpn/openvpn-auth-pam.so authentication" >> server.conf
     # Listen at port 53 too if user wants that
     if [ $ALTPORT = 'y' ]; then
             iptables -t nat -A PREROUTING -p udp -d $IP --dport 53 -j REDIRECT --to-port 1194
@@ -103,6 +103,7 @@ else
 	fi
 fi
 sed -i "s|remote my-server-1 1194|remote $IP $PORT|" /usr/share/doc/openvpn/examples/sample-config-files/client.conf
+echo "auth-user-pass" >> /usr/share/doc/openvpn/examples/sample-config-files/client.conf
 cp /usr/share/doc/openvpn/examples/sample-config-files/client.conf ~/ovpn-$CLIENT/$CLIENT.conf
 cp /etc/openvpn/easy-rsa/2.0/keys/ca.crt ~/ovpn-$CLIENT
 cp /etc/openvpn/easy-rsa/2.0/keys/$CLIENT.crt ~/ovpn-$CLIENT
@@ -113,13 +114,4 @@ sed -i "s|key client.key|key $CLIENT.key|" $CLIENT.conf
 tar -czf ../ovpn-$CLIENT.tar.gz $CLIENT.conf ca.crt $CLIENT.crt $CLIENT.key
 cd ~/
 rm -rf ovpn-$CLIENT
-echo ""
-echo "Finished!"
-echo ""
-echo "Your client config is available at ~/ovpn-$CLIENT.tar.gz"
-echo ""
-echo ""
-echo "Script by Nyr on GitHub with modifications by me"
-echo "https://github.com/Nyr/openvpn-install"
-echo "OpenVPN road warrior installer for Debian-based distros."
-
+mv ovpn-$CLIENT.tar.gz /var/www/html/configs

@@ -1,6 +1,7 @@
 <?php
 
-	$installed = strpos(shell_exec("admin/scripts/installcheck.sh"), 'e');
+	$installed = strpos(shell_exec("scripts/installcheck.sh"), 'e');
+	$dir = shell_exec('pwd');
 
 ?>
 <html>
@@ -12,13 +13,13 @@
 		<link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css' />
 		<script type="text/javascript">
 		function delayedRedirect(){
-			window.location = "/admin/installdone.php"
+			window.location = "<?php echo $dir; ?>/admin/installdone.php";
 		}
 		</script>
 	</head>
 	<?php
 		if ($installed == false	&& isset($_POST['install'])) {	
-			echo("<body onLoad=\"setTimeout('delayedRedirect()', 240000)\">");
+			echo("<body onLoad=\"setTimeout('delayedRedirect()', 180000)\">");
 		}
 		else {
 			echo("<body>");

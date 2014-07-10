@@ -1,143 +1,0 @@
-Script started on Fri Jan 31 21:16:50 2014
-Script by Nyr on GitHub with modifications by me
-https://github.com/Nyr/openvpn-install
-OpenVPN road warrior installer for Debian-based distros.
-0% [Working]            Hit http://software.virtualmin.com virtualmin-lucid Release.gpg
-            10% [Waiting for headers] [Connecting to archive.canonical.com (91.189.92.191)]                                                                               Hit http://archive.ubuntu.com lucid Release.gpg
-                                                                               Hit http://archive.ubuntu.com lucid-updates Release.gpg
-                                                                               Hit http://archive.ubuntu.com lucid-security Release.gpg
-30% [Connecting to archive.canonical.com (91.189.92.191)] [Waiting for headers]                                                                               Hit http://software.virtualmin.com virtualmin-universal Release.gpg
-35% [Waiting for headers] [Connecting to archive.canonical.com (91.189.92.191)]                                                                               Hit http://archive.ubuntu.com lucid Release
-35% [Waiting for headers] [Waiting for headers] [Waiting for headers] [Connecti                                                                               Hit http://archive.ubuntu.com lucid-updates Release
-                                                                               Hit http://software.virtualmin.com virtualmin-lucid Release
-                                                                               35% [Waiting for headers] [Waiting for headers]                                               35% [Release gpgv 57.2kB] [Waiting for headers] [Waiting for headers] [Connecti35% [Waiting for headers] [Waiting for headers] [Waiting for headers] [Waiting 35% [Release gpgv 58.3kB] [Waiting for headers] [Waiting for headers] [Waiting 35% [Waiting for headers] [Waiting for headers] [Waiting for headers] [Waiting 35% [Release gpgv 1954B] [Waiting for headers] [Waiting for headers] [Waiting f38% [Waiting for headers] [Waiting for headers] [Waiting for headers] [Waiting                                                                                Hit http://archive.ubuntu.com lucid-security Release
-                                                                               38% [Waiting for headers] [Waiting for headers] [Waiting for headers]                                                                     38% [Release gpgv 57.3kB] [Waiting for headers] [Waiting for headers] [Waiting                                                                                Hit http://software.virtualmin.com virtualmin-universal Release
-38% [Release gpgv 57.3kB] [Waiting for headers] [Waiting for headers] [Waiting 37% [Waiting for headers] [Waiting for headers] [Connecting to software.virtual37% [Release gpgv 3066B] [Waiting for headers] [Waiting for headers] [Connectin40% [Waiting for headers] [Waiting for headers] [Connecting to software.virtual                                                                               Hit http://archive.ubuntu.com lucid/main Packages
-44% [Waiting for headers] [Waiting for headers] [Waiting for headers] [Waiting                                                                                Hit http://archive.ubuntu.com lucid/restricted Packages
-                                                                               Hit http://archive.ubuntu.com lucid/universe Packages
-52% [Waiting for headers] [Waiting for headers] [Waiting for headers] [Waiting                                                                                Hit http://archive.ubuntu.com lucid-updates/main Packages
-56% [Waiting for headers] [Waiting for headers] [Waiting for headers] [Waiting                                                                                Hit http://archive.ubuntu.com lucid-updates/restricted Packages
-60% [Waiting for headers] [Waiting for headers] [Waiting for headers] [Waiting                                                                                Hit http://archive.ubuntu.com lucid-updates/universe Packages
-64% [Waiting for headers] [Waiting for headers] [Waiting for headers] [Waiting                                                                                Hit http://software.virtualmin.com virtualmin-lucid/main Packages
-                                                                               68% [Waiting for headers] [Waiting for headers] [Waiting for headers]                                                                     Hit http://archive.canonical.com lucid Release.gpg
-                                                                     69% [Waiting for headers] [Connecting to software.virtualmin.com (108.60.199.10                                                                               Hit http://archive.ubuntu.com lucid-security/main Packages
-                                                                               Hit http://archive.ubuntu.com lucid-security/restricted Packages
-                                                                               Hit http://archive.ubuntu.com lucid-security/universe Packages
-                                                                               80% [Waiting for headers] [Waiting for headers] [Waiting for headers]                                                                     Hit http://software.virtualmin.com virtualmin-universal/main Packages
-                                                                     Ign http://ppa.launchpad.net lucid Release.gpg
-                                                                     Get:1 http://ppa.launchpad.net lucid Release.gpg [316B]
-                                                                     99% [Waiting for headers]                         Hit http://archive.canonical.com lucid Release
-99% [Waiting for headers]                         99% [Release gpgv 8215B] [Waiting for headers]                                              99% [Waiting for headers]                         Ign http://ppa.launchpad.net lucid Release
-99% [Waiting for headers]                         Hit http://archive.canonical.com lucid/partner Packages
-99% [Waiting for headers]                         Get:2 http://ppa.launchpad.net lucid Release [14.0kB]
-                         50% [2 Release 6845B/14.0kB 48%]                                99% [Working]             99% [2 Release gpgv 14.0kB] [Waiting for headers]                                                 99% [Waiting for headers]                         Ign http://ppa.launchpad.net lucid/main Packages
-                         99% [Working]             Get:3 http://ppa.launchpad.net lucid/main Packages [2835B]
-             99% [3 Packages 2835B/2835B 100%]                                 99% [Working]             99% [3 Packages bzip2 0B] [Waiting for headers]                                               99% [Waiting for headers]                         Ign http://ppa.launchpad.net lucid/main Packages
-                         99% [Working]             Err http://ppa.launchpad.net lucid/main Packages
-  404  Not Found
-99% [Working]             Fetched 17.1kB in 2s (6815B/s)
-W: Failed to fetch http://ppa.launchpad.net/cwayne18/doge/ubuntu/dists/lucid/main/binary-i386/Packages.gz  404  Not Found
-
-E: Some index files failed to download, they have been ignored, or old ones used instead.
-Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 17%Reading package lists... 17%Reading package lists... 17%Reading package lists... 17%Reading package lists... 53%Reading package lists... 70%Reading package lists... 70%Reading package lists... 82%Reading package lists... 82%Reading package lists... 82%Reading package lists... 82%Reading package lists... 85%Reading package lists... 85%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
-Reading state information... 0%Reading state information... 0%Reading state information... Done
-iptables is already the newest version.
-sshpass is already the newest version.
-openssl is already the newest version.
-The following extra packages will be installed:
-  openvpn-blacklist
-Suggested packages:
-  resolvconf
-The following NEW packages will be installed:
-  openvpn openvpn-blacklist
-0 upgraded, 2 newly installed, 0 to remove and 10 not upgraded.
-Need to get 0B/1493kB of archives.
-After this operation, 3375kB of additional disk space will be used.
-debconf: unable to initialize frontend: Dialog
-debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
-debconf: falling back to frontend: Readline
-Preconfiguring packages ...
-Selecting previously deselected package openvpn-blacklist.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 112152 files and directories currently installed.)
-Unpacking openvpn-blacklist (from .../openvpn-blacklist_0.4_all.deb) ...
-Selecting previously deselected package openvpn.
-Unpacking openvpn (from .../openvpn_2.1.0-1ubuntu1.1_i386.deb) ...
-Processing triggers for man-db ...
-debconf: unable to initialize frontend: Dialog
-debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
-debconf: falling back to frontend: Readline
-Setting up openvpn-blacklist (0.4) ...
-Setting up openvpn (2.1.0-1ubuntu1.1) ...
-debconf: unable to initialize frontend: Dialog
-debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
-debconf: falling back to frontend: Readline
- * Restarting virtual private network daemon(s)...
- *   No VPN is running.
-
-cp: cannot stat `openssl-1.0.0.cnf': No such file or directory
-NOTE: If you run ./clean-all, I will be doing a rm -rf on /etc/openvpn/easy-rsa/2.0/keys
-Using CA Common Name: Fort-Funston CA
-Generating a 2048 bit RSA private key
-................................................................+++
-..............................................................................................................+++
-writing new private key to 'ca.key'
------
-Generating a 2048 bit RSA private key
-.........................................................................................+++
-.......................+++
-writing new private key to 'server.key'
------
-Using configuration from /etc/openvpn/easy-rsa/2.0/openssl.cnf
-Check that the request matches the signature
-Signature ok
-The Subject's Distinguished Name is as follows
-countryName           :PRINTABLE:'US'
-stateOrProvinceName   :PRINTABLE:'CA'
-localityName          :PRINTABLE:'SanFrancisco'
-organizationName      :PRINTABLE:'Fort-Funston'
-commonName            :PRINTABLE:'server'
-emailAddress          :IA5STRING:'me@myhost.mydomain'
-Certificate is to be certified until Jan 30 05:17:00 2024 GMT (3650 days)
-
-Write out database with 1 new entries
-Data Base Updated
-Using Common Name: User
-Generating a 2048 bit RSA private key
-...........+++
-...........+++
-writing new private key to 'User.key'
------
-Using configuration from /etc/openvpn/easy-rsa/2.0/openssl.cnf
-Check that the request matches the signature
-Signature ok
-The Subject's Distinguished Name is as follows
-countryName           :PRINTABLE:'US'
-stateOrProvinceName   :PRINTABLE:'CA'
-localityName          :PRINTABLE:'SanFrancisco'
-organizationName      :PRINTABLE:'Fort-Funston'
-commonName            :PRINTABLE:'User'
-emailAddress          :IA5STRING:'me@myhost.mydomain'
-Certificate is to be certified until Jan 30 05:17:00 2024 GMT (3650 days)
-
-Write out database with 1 new entries
-Data Base Updated
-Generating DH parameters, 2048 bit long safe prime, generator 2
-This is going to take a long time
-.............................+.+....................................+..................................................................................................+.........................................................................................................................................................................................................................................................+....................................................................................................................................................................+..........................+..............................................................+...........................................................................+........................+..........+..................................................................................................+.........................................................................+.............................+...............................................................................+........................................................................................................................+..........................................................................................................................................................+............................................................................................................................................................................................................+..................................................................................................+....................................................................+.............................................................................................+...........................................................................................................+...................................................................................................................................................................................................................................+..............................+...................................................................................................+....+........................................................................................................................................+.................................+........................................................................................................................................................................................................................................................................................+.....................................+.........................................................................................................+..............................................................................+................................................+...................................................................................................................................................................................................................................................................................................+.....................................................................................................+.................................................................................................................................................................................................................................................................................................................................................................................+......................................................................................................................+...................................................+.....................................................................................................................................................................................................................................................................+............................................+..............................................+...................+..........................................+......................................................................................................+...+.....................................................................................+......................+.......................................................................................................................................................+.............................................................................+.........................................................................................................................................................+......................................................................+...........................................+................................................................................................................+...............................................................................................+................+..........................................................................+..........................+.....................+..+............................................+......................................+..................+................................................................................+.......................................+.........................................................+..++*++*
- * Stopping virtual private network daemon(s)...
- *   No VPN is running.
- * Starting virtual private network daemon(s)...
- *   Autostarting VPN 'server'
-   ...done.
-
-Finished!
-
-Your client config is available at ~/ovpn-User.tar.gz
-
-
-Script by Nyr on GitHub with modifications by me
-https://github.com/Nyr/openvpn-install
-OpenVPN road warrior installer for Debian-based distros.
-
-Script done on Fri Jan 31 21:20:35 2014
